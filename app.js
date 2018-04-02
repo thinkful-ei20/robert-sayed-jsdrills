@@ -29,4 +29,18 @@ function jediName(firstName, lastName) {
   return console.log(`${lastName.slice(0, 3)}${firstName.slice(0, 2)}`);
 }
 
-jediName('Anakin', 'Skywalker');
+//jediName('Anakin', 'Skywalker');
+
+function beyond(num) {
+  if (num === Number.POSITIVE_INFINITY || num === Number.NEGATIVE_INFINITY) {
+    console.log ('And beyond');
+  } else if (num > 0 && num !== Number.POSITIVE_INFINITY ) {
+    console.log ('To infinity');
+  } else if (num < 0 && num !== Number.NEGATIVE_INFINITY) {
+    console.log ('To negative infinity');
+  } else if (num === 0) {
+    console.log ('Staying home');
+  }
+}
+
+beyond(10);
