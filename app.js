@@ -92,8 +92,45 @@ function dayCounter(month, leapYear) {
     console.log (`${month} has 30 days`);
     break;
   default:
-    console.log ('Must provide a valid month.')
+    console.log ('Must provide a valid month.');
   }
 }
 
-dayCounter('Bacon', true);
+// dayCounter('Bacon', true);
+
+function rockPaperScissors(num) {
+  const randomNo = Math.floor(Math.random() * 3) + 1;
+  if (num !== 1 && num !== 2 && num !== 3) {
+    throw 'error';
+  }
+  if (randomNo === num) {
+    console.log('the result is a tie');
+  }
+  if (num === 1) {
+    if (randomNo === 3) {
+      console.log('Rock beats scissors');
+      console.log('Player wins');
+    } else if (randomNo === 2) {
+      console.log('Paper beats rock');
+      console.log('Computer wins');
+    }
+  } else if (num === 3) {
+    if (randomNo === 1) {
+      console.log('Rock beats scissors');
+      console.log('Computer wins');
+    } else if (randomNo === 2) {
+      console.log('Scissors beats paper');
+      console.log('Player wins');
+    }
+  } else if (num === 2) {
+    if (randomNo === 3) {
+      console.log('Scissors beats paper');
+      console.log('Computer wins');
+    } else if (randomNo === 1) {
+      console.log('Paper beats rock');
+      console.log('Player wins');
+    }
+  }
+}
+
+rockPaperScissors(3);
