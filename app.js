@@ -23,5 +23,10 @@ function whoAmI(name, age) {
   }
 }
 
-whoAmI('Robert', -21);
+// whoAmI('Robert', -21);
 
+function jediName(firstName, lastName) {
+  return console.log(`${lastName.slice(0, 3)}${firstName.slice(0, 2)}`);
+}
+
+jediName('Anakin', 'Skywalker');
